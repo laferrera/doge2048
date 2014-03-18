@@ -1,11 +1,15 @@
-@import url(fonts/clear-sans.css);
+@import url(fonts/comic-sans.css);
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
-  color: #776e65;
-  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px; }
+  background: #fff;
+  color: #000;
+/*  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;*/
+  font-family: 'Comic Sans', 'Comic Sans', Chalkboard, Helvetica, Arial, sans-serif;
+  font-size: 18px; 
+  -webkit-animation: background-gradient-change linear 6s infinite alternate;
+  -moz-animation: background-gradient-change linear 6s infinite alternate;
+  -moz-animation: background-gradient-change linear 6s infinite alternate; }
 
 body {
   margin: 80px 0; }
@@ -16,11 +20,29 @@ body {
   clear: both; }
 
 h1.title {
-  font-size: 80px;
+  color:#333;
+  font-size: 48px;
   font-weight: bold;
   margin: 0;
   display: block;
   float: left; }
+  
+  #twitter-widget-0 {
+    width: 100px !important;    
+    position: relative;
+  }
+  
+  .footer > div{
+    display:inline-block !important;
+    width: auto !important;
+    overflow:hidden;
+  }
+  
+  .footer{
+    width:188px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;}
 
 @-webkit-keyframes move-up {
   0% {
@@ -48,19 +70,158 @@ h1.title {
   100% {
     top: -50px;
     opacity: 0; } }
+    
+  @-webkit-keyframes fade-in-out {
+    0% {
+      opacity: 0; }
+      
+    50% {
+      opacity: 1; }
+
+    100% {
+      opacity: 0; } }
+
+  @-moz-keyframes fade-in-out {
+    0% {
+      opacity: 0; }
+      
+    50% {
+      opacity: 1; }
+
+    100% {
+      opacity: 0; } }
+
+  @keyframes fade-in-out {
+    0% {
+      opacity: 0; }
+      
+    50% {
+      opacity: 1; }
+
+    100% {
+      opacity: 0; } }
+      
+  @-webkit-keyframes hover-change {
+      0%   {color: cyan;}
+      25%  {color: magenta;}
+      50%  {color: yellow;}
+      100% {color: white;} }
+
+  @-moz-keyframes hover-change {
+      0%   {color: cyan;}
+      25%  {color: magenta;}
+      50%  {color: yellow;}
+      100% {color: white;} }
+      
+  @keyframes hover-change {
+      0%   {color: cyan;}
+      25%  {color: magenta;}
+      50%  {color: yellow;}
+      100% {color: white;} }
+      
+  @-webkit-keyframes background-gradient-change {
+      0%   {background: #cff;}
+      33%  {background: #fcf;}
+      66%  {background: #ffc;}
+      100%   {background: #cff;}}
+
+  @-moz-keyframes background-gradient-change {
+      0%   {background: #dff;}
+      33%  {background: #fdf;}
+      66%  {background: #ffd;}
+      100%   {background: #dff;}}
+      
+  @keyframes background-gradient-change {
+      0%   {background: #dff;}
+      33%  {background: #fdf;}
+      66%  {background: #ffd;}
+      100%   {background: #dff;}}      
+      
+  a:hover {
+         -webkit-animation: hover-change linear 0.1s infinite;
+         -moz-animation: hover-change linear 0.1s infinite;
+         animation: hover-change linear 0.1s infinite;
+       }      
 
 .scores-container {
   float: right;
   text-align: right; }
+  
+.game-container .doge-says {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;}
+  .game-container .doge-says p {
+    position:fixed;
+    font-size: 60px;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    -webkit-animation: fade-in-out 600ms ease-in;
+    -moz-animation: fade-in-out 600ms ease-in;
+    animation: fade-in-out 600ms ease-in;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both; }
+    
+
+  .info-container {
+    position: relative;
+    cursor:pointer;
+    left:50%;
+    margin-left:-25px;
+    top:30px;
+    margin-bottom:50px;}
+    
+  .info-container, .hide-info {
+    display: inline-block;
+    background: #f0f;
+    padding: 10px 15px;
+    height: 10px;
+    line-height: 10px;
+    font-size:10px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    margin-top: 8px;
+    text-align: center; }
+      .info-container a, .hide-info a{
+        color:#fff;
+        text-decoration:none;}
+    
+  .game-container .info {
+    display: none;
+    position: absolute;
+    overflow: scroll;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,0.9);
+    z-index: 100;
+    border-radius: 6px;
+    text-align: center;
+/*    -webkit-animation: fade-in 800ms ease;
+    -moz-animation: fade-in 800ms ease;
+    animation: fade-in 800ms ease;*/
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both; }
+    .game-container .info p {
+      position:relative;
+      font-size: 16px;
+      padding:10px 20px 10px 20px;
+      font-weight: bold;}
 
 .score-container, .best-container {
   position: relative;
   display: inline-block;
-  background: #bbada0;
+  background: #f0f;
   padding: 15px 25px;
-  font-size: 25px;
+/*  font-size: 25px;*/
   height: 25px;
-  line-height: 47px;
+  line-height: 42px;
   font-weight: bold;
   border-radius: 3px;
   color: white;
@@ -72,17 +233,15 @@ h1.title {
     top: 10px;
     left: 0;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 13px;
     text-align: center;
-    color: #eee4da; }
+    color: #000; }
   .score-container .score-addition, .best-container .score-addition {
     position: absolute;
     right: 30px;
-    color: red;
-    font-size: 25px;
-    line-height: 25px;
-    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
     color: rgba(119, 110, 101, 0.9);
     z-index: 100;
     -webkit-animation: move-up 600ms ease-in;
@@ -104,7 +263,7 @@ p {
   line-height: 1.65; }
 
 a {
-  color: #776e65;
+  color: #f0f;
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer; }
@@ -151,21 +310,22 @@ hr {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  background: #bbada0;
+  background: rgba(0,0,0,0.05);
+/*  background: #a0a0a0;*/
   border-radius: 6px;
   width: 500px;
   height: 500px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  .game-container .game-message {
+  .game-container .game-message{
     display: none;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(238, 228, 218, 0.5);
+    background: rgba(255,255,255,0.9);
     z-index: 100;
     text-align: center;
     -webkit-animation: fade-in 800ms ease 1200ms;
@@ -185,7 +345,7 @@ hr {
       margin-top: 59px; }
     .game-container .game-message a {
       display: inline-block;
-      background: #8f7a66;
+      background: #f0f;
       border-radius: 3px;
       padding: 0 20px;
       text-decoration: none;
@@ -222,7 +382,9 @@ hr {
   margin-right: 15px;
   float: left;
   border-radius: 3px;
-  background: rgba(238, 228, 218, 0.35); }
+  background: rgba(255,255,255,0.8);
+/*  background: rgba(238, 228, 218, 0.35);*/
+ }
   .grid-cell:last-child {
     margin-right: 0; }
 
@@ -233,6 +395,7 @@ hr {
 .tile, .tile .tile-inner {
   width: 107px;
   height: 107px;
+  -webkit-transform: translate3d(0, 0, 0);  
   line-height: 116.25px; }
 .tile.tile-position-1-1 {
   -webkit-transform: translate(0px, 0px);
@@ -300,6 +463,7 @@ hr {
   transform: translate(363px, 363px); }
 
 .tile {
+  color: rgba(0,0,0,0);
   position: absolute;
   -webkit-transition: 100ms ease-in-out;
   -moz-transition: 100ms ease-in-out;
@@ -315,66 +479,78 @@ hr {
     z-index: 10;
     font-size: 55px; }
   .tile.tile-2 .tile-inner {
-    background: #eee4da;
+    background: #f0f url('../img/212/doge-wink-212.gif');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    
   .tile.tile-4 .tile-inner {
-    background: #ede0c8;
+    background: #f0f url('../img/212/doge-shake-space-212.gif');
+    background-size: cover;    
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    
   .tile.tile-8 .tile-inner {
-    color: #f9f6f2;
-    background: #f2b179; }
+    background: #f0f url('../img/212/doge-peepers-212.gif');
+    background-size: cover;}
+    
   .tile.tile-16 .tile-inner {
-    color: #f9f6f2;
-    background: #f59563; }
+    background: #f0f url('../img/212/doge-prizza-212.gif');
+    background-size: cover;}
+    
   .tile.tile-32 .tile-inner {
-    color: #f9f6f2;
-    background: #f67c5f; }
+    background: #f0f url('../img/212/doge-hat-212.gif');
+    background-size: cover;}
+    
   .tile.tile-64 .tile-inner {
-    color: #f9f6f2;
-    background: #f65e3b; }
+    background: #f0f url('../img/212/doge-gradient-212.gif');
+    background-size: cover;}
+    
   .tile.tile-128 .tile-inner {
-    color: #f9f6f2;
-    background: #edcf72;
+    background: #f0f url('../img/212/doge-fat-212.gif');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
     font-size: 45px; }
     @media screen and (max-width: 480px) {
       .tile.tile-128 .tile-inner {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
-    color: #f9f6f2;
-    background: #edcc61;
+
+    background: #f0f url('../img/212/doge-rainbow-212.gif');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px; }
     @media screen and (max-width: 480px) {
       .tile.tile-256 .tile-inner {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
-    color: #f9f6f2;
-    background: #edc850;
+
+    background: #f0f url('../img/212/doge-sunglasses-212.gif');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px; }
     @media screen and (max-width: 480px) {
       .tile.tile-512 .tile-inner {
         font-size: 25px; } }
   .tile.tile-1024 .tile-inner {
-    color: #f9f6f2;
-    background: #edc53f;
+    background: #f0f url('../img/212/doge-derp-212.gif');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
     font-size: 35px; }
     @media screen and (max-width: 480px) {
       .tile.tile-1024 .tile-inner {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
-    color: #f9f6f2;
-    background: #edc22e;
+
+    background: #f0f url('../img/212/doge-shake-212.gif');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px; }
     @media screen and (max-width: 480px) {
       .tile.tile-2048 .tile-inner {
         font-size: 15px; } }
   .tile.tile-super .tile-inner {
-    color: #f9f6f2;
-    background: #3c3a32;
+
+    background: #f0f url('../img/212/doge-derp-212.gif');
+    background-size: cover;    
     font-size: 30px; }
     @media screen and (max-width: 480px) {
       .tile.tile-super .tile-inner {
@@ -488,7 +664,9 @@ hr {
   margin-bottom: 0; }
 
 .game-explanation {
-  margin-top: 50px; }
+  margin-top: 0px;
+  text-align: center;
+  font-size: 14px;}
 
 @media screen and (max-width: 480px) {
   html, body {
@@ -499,7 +677,7 @@ hr {
     padding: 0 20px; }
 
   h1.title {
-    font-size: 27px;
+    font-size: 25px;
     margin-top: 15px; }
 
   .container {
@@ -514,6 +692,9 @@ hr {
   .heading {
     margin-bottom: 10px; }
 
+  .game-explanation {
+    display:none;}
+
   .game-container {
     margin-top: 40px;
     position: relative;
@@ -522,7 +703,6 @@ hr {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    background: #bbada0;
     border-radius: 6px;
     width: 280px;
     height: 280px;
@@ -536,12 +716,11 @@ hr {
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(238, 228, 218, 0.5);
       z-index: 100;
       text-align: center;
-      -webkit-animation: fade-in 800ms ease 1200ms;
-      -moz-animation: fade-in 800ms ease 1200ms;
-      animation: fade-in 800ms ease 1200ms;
+      -webkit-animation: fade-in 800ms ease;
+      -moz-animation: fade-in 800ms ease;
+      animation: fade-in 800ms ease;
       -webkit-animation-fill-mode: both;
       -moz-animation-fill-mode: both;
       animation-fill-mode: both; }
@@ -556,19 +735,16 @@ hr {
         margin-top: 59px; }
       .game-container .game-message a {
         display: inline-block;
-        background: #8f7a66;
         border-radius: 3px;
         padding: 0 20px;
         text-decoration: none;
-        color: #f9f6f2;
         height: 40px;
         line-height: 42px;
         margin-left: 9px; }
         .game-container .game-message a.keep-playing-button {
           display: none; }
       .game-container .game-message.game-won {
-        background: rgba(237, 194, 46, 0.5);
-        color: #f9f6f2; }
+        background: rgba(237, 194, 46, 0.5);}
         .game-container .game-message.game-won a.keep-playing-button {
           display: inline-block; }
       .game-container .game-message.game-won, .game-container .game-message.game-over {
@@ -592,8 +768,7 @@ hr {
     height: 57.5px;
     margin-right: 10px;
     float: left;
-    border-radius: 3px;
-    background: rgba(238, 228, 218, 0.35); }
+    border-radius: 3px;}
     .grid-cell:last-child {
       margin-right: 0; }
 
@@ -670,11 +845,106 @@ hr {
     -moz-transform: translate(202px, 202px);
     transform: translate(202px, 202px); }
 
+    .tile.tile-2 .tile-inner {
+      background: #f0f url('../img/114/doge-wink-114.gif');
+      background-size: cover;
+      box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    
+    .tile.tile-4 .tile-inner {
+      background: #f0f url('../img/114/doge-shake-space-114.gif');
+      background-size: cover;    
+      box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    
+    .tile.tile-8 .tile-inner {
+      background: #f0f url('../img/114/doge-peepers-114.gif');
+      background-size: cover;}
+    
+    .tile.tile-16 .tile-inner {
+      background: #f0f url('../img/114/doge-prizza-114.gif');
+      background-size: cover;}
+    
+    .tile.tile-32 .tile-inner {
+      background: #f0f url('../img/114/doge-hat-114.gif');
+      background-size: cover;}
+    
+    .tile.tile-64 .tile-inner {
+      background: #f0f url('../img/114/doge-gradient-114.gif');
+      background-size: cover;}
+    
+    .tile.tile-128 .tile-inner {
+      background: #f0f url('../img/114/doge-fat-114.gif');
+      background-size: cover;
+      box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+      font-size: 45px; }
+      @media screen and (max-width: 480px) {
+        .tile.tile-128 .tile-inner {
+          font-size: 25px; } }
+    .tile.tile-256 .tile-inner {
+
+      background: #f0f url('../img/114/doge-rainbow-114.gif');
+      background-size: cover;
+      box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+      font-size: 45px; }
+      @media screen and (max-width: 480px) {
+        .tile.tile-256 .tile-inner {
+          font-size: 25px; } }
+    .tile.tile-512 .tile-inner {
+
+      background: #f0f url('../img/114/doge-sunglasses-114.gif');
+      background-size: cover;
+      box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+      font-size: 45px; }
+      @media screen and (max-width: 480px) {
+        .tile.tile-512 .tile-inner {
+          font-size: 25px; } }
+    .tile.tile-1024 .tile-inner {
+      background: #f0f url('../img/114/doge-derp-114.gif');
+      background-size: cover;
+      box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+      font-size: 35px; }
+      @media screen and (max-width: 480px) {
+        .tile.tile-1024 .tile-inner {
+          font-size: 15px; } }
+    .tile.tile-2048 .tile-inner {
+
+      background: #f0f url('../img/114/doge-shake-114.gif');
+      background-size: cover;
+      box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+      font-size: 35px; }
+      @media screen and (max-width: 480px) {
+        .tile.tile-2048 .tile-inner {
+          font-size: 15px; } }
+    .tile.tile-super .tile-inner {
+
+      background: #f0f url('../img/114/doge-derp-114.gif');
+      background-size: cover;    
+      font-size: 30px; }
+      @media screen and (max-width: 480px) {
+        .tile.tile-super .tile-inner {
+          font-size: 10px; } }
+
+
+
+    #twitter-widget-0 {
+      position: relative;
+      top:5px;
+    }
+
+    .game-container .info p {
+      font-size: 12px;
+      padding:5px 10px 5px 10px;
+    }
+
   .game-container {
     margin-top: 20px; }
 
   .tile .tile-inner {
     font-size: 35px; }
+
+  .doge-says p {
+    font-size: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;}
 
   .game-message p {
     font-size: 30px !important;
@@ -683,3 +953,4 @@ hr {
     margin-top: 90px !important; }
   .game-message .lower {
     margin-top: 30px !important; } }
+    
