@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -84,6 +84,9 @@
       </div>
     </div>
     <p class="game-explanation">Use your arrow keys or swipe to combine similar Doges and score points!</p>
+    <div class="shout-out-container">
+      <div class="shout-out"><a href="http://maxhash.com/doge" target="_blank">Check out everything hashtagged Doge!</a></div>
+    </div>
     <div class="info-container">
       <a class="show-info">INFO</a>
     </div>
@@ -91,6 +94,20 @@
   <div class="footer">
     <div class="fb-like" data-href="http://doge2048.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out DOGE2048, a game where you join doges to score high! #2048game #doge2048" data-via="laferrera" data-url="http://doge2048.com" data-counturl="http://doge2048.com">Tweet</a>
+    <script src="http://cdn.bitmindo.com/dogecoin.min.js"></script>
+    <script>
+      CoinWidgetCom.go({
+        wallet_address: "DCaSFSAnQgwLkzXWq1hFbfGitNNdL7zFPV"
+        , currency: "dogecoin"
+        , counter: "hide"
+        , alignment: "ar"
+        , qrcode: true
+        , auto_show: false
+        , lbl_button: "Donate"
+        , lbl_address: "Tip Dogecoin to this Address:"
+        , lbl_amount: "DOGE"
+      });
+    </script>
   </div>
 
   <script src="js/animframe_polyfill.js"></script>
