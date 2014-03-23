@@ -1,18 +1,17 @@
-@import url(fonts/comic-sans.css);
 html, body {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: #444444;
   color: #000;
-/*  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;*/
-  font-family: 'Comic Sans', 'Comic Sans', Chalkboard, Helvetica, Arial, sans-serif;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  /*font-family: 'Comic Sans', 'Comic Sans', Chalkboard, Helvetica, Arial, sans-serif;*/
   font-size: 18px; 
-  -webkit-animation: background-gradient-change linear 6s infinite alternate;
+  /*-webkit-animation: background-gradient-change linear 6s infinite alternate;
   -moz-animation: background-gradient-change linear 6s infinite alternate;
-  -moz-animation: background-gradient-change linear 6s infinite alternate; }
+  -moz-animation: background-gradient-change linear 6s infinite alternate;*/ }
 
 body {
-  margin: 80px 0 0 0; }
+  margin: 0; }
 
 .heading:after {
   content: "";
@@ -20,7 +19,7 @@ body {
   clear: both; }
 
 h1.title {
-  color:#333;
+  color:#f7f7f7;
   font-size: 48px;
   font-weight: bold;
   margin: 0;
@@ -144,9 +143,7 @@ h1.title {
       100%   {background: #dff;}}      
       
   a:hover {
-         -webkit-animation: hover-change linear 0.1s infinite;
-         -moz-animation: hover-change linear 0.1s infinite;
-         animation: hover-change linear 0.1s infinite;
+         color:#911609;
        }      
 
 .scores-container {
@@ -201,7 +198,7 @@ h1.title {
     
   .info-container, .hide-info {
     display: inline-block;
-    background: #f0f;
+    background: #ac1c0c;
     padding: 10px 15px;
     height: 10px;
     line-height: 10px;
@@ -243,7 +240,7 @@ h1.title {
 .score-container, .best-container {
   position: relative;
   display: inline-block;
-  background: #f0f;
+  background: #ac1c0c;
   padding: 15px 25px;
 /*  font-size: 25px;*/
   height: 25px;
@@ -289,7 +286,7 @@ p {
   line-height: 1.65; }
 
 a {
-  color: #f0f;
+  color: #ac1c0c;
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer; }
@@ -505,33 +502,33 @@ hr {
     z-index: 10;
     font-size: 55px; }
   .tile.tile-2 .tile-inner {
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-wink-212.gif');
+    background: url('/img/gems64/01.png');
     background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
     
   .tile.tile-4 .tile-inner {
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-shake-space-212.gif');
+    background: url('/img/gems64/02.png');
     background-size: cover;    
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
     
   .tile.tile-8 .tile-inner {
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-peepers-212.gif');
+    background: url('/img/gems64/03.png');
     background-size: cover;}
     
   .tile.tile-16 .tile-inner {
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-prizza-212.gif');
+    background: url('/img/gems64/04.png');
     background-size: cover;}
     
   .tile.tile-32 .tile-inner {
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-hat-212.gif');
+    background: url('/img/gems64/05.png');
     background-size: cover;}
     
   .tile.tile-64 .tile-inner {
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-gradient-212.gif');
+    background: url('/img/gems64/06.png');
     background-size: cover;}
     
   .tile.tile-128 .tile-inner {
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-fat-212.gif');
+    background: url('/img/gems64/07.png');
     background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
     font-size: 45px; }
@@ -540,7 +537,7 @@ hr {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
 
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-rainbow-212.gif');
+    background: url('/img/gems64/08.png');
     background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px; }
@@ -549,7 +546,7 @@ hr {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
 
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-sunglasses-212.gif');
+    background: url('/img/gems64/09.png');
     background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px; }
@@ -557,7 +554,7 @@ hr {
       .tile.tile-512 .tile-inner {
         font-size: 25px; } }
   .tile.tile-1024 .tile-inner {
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-derp-212.gif');
+    background: url('/img/gems64/10.png');
     background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
     font-size: 35px; }
@@ -566,7 +563,7 @@ hr {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
 
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-shake-212.gif');
+    background: url('/img/gems64/11.png');
     background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px; }
@@ -575,7 +572,7 @@ hr {
         font-size: 15px; } }
   .tile.tile-super .tile-inner {
 
-    background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/212/doge-derp-212.gif');
+    background: url('/img/gems64/12.png');
     background-size: cover;    
     font-size: 30px; }
     @media screen and (max-width: 480px) {
@@ -882,33 +879,33 @@ hr {
     transform: translate(202px, 202px); }
 
     .tile.tile-2 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-wink-114.gif');
+      background: url('/img/gems64/01.png');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
     
     .tile.tile-4 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-shake-space-114.gif');
+      background: url('/img/gems64/02.png');
       background-size: cover;    
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
     
     .tile.tile-8 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-peepers-114.gif');
+      background: url('/img/gems64/03.png');
       background-size: cover;}
     
     .tile.tile-16 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-prizza-114.gif');
+      background: url('/img/gems64/04.png');
       background-size: cover;}
     
     .tile.tile-32 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-hat-114.gif');
+      background: url('/img/gems64/05.png');
       background-size: cover;}
     
     .tile.tile-64 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-gradient-114.gif');
+      background: url('/img/gems64/06.png');
       background-size: cover;}
     
     .tile.tile-128 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-fat-114.gif');
+      background: url('/img/gems64/07.png');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
       font-size: 45px; }
@@ -917,7 +914,7 @@ hr {
           font-size: 25px; } }
     .tile.tile-256 .tile-inner {
 
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-rainbow-114.gif');
+      background: url('/img/gems64/08.png');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
       font-size: 45px; }
@@ -926,7 +923,7 @@ hr {
           font-size: 25px; } }
     .tile.tile-512 .tile-inner {
 
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-sunglasses-114.gif');
+      background: url('/img/gems64/09.png');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
       font-size: 45px; }
@@ -934,7 +931,7 @@ hr {
         .tile.tile-512 .tile-inner {
           font-size: 25px; } }
     .tile.tile-1024 .tile-inner {
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-derp-114.gif');
+      background: url('/img/gems64/10.png');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
       font-size: 35px; }
@@ -943,7 +940,7 @@ hr {
           font-size: 15px; } }
     .tile.tile-2048 .tile-inner {
 
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-shake-114.gif');
+      background: url('/img/gems64/11.png');
       background-size: cover;
       box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
       font-size: 35px; }
@@ -952,7 +949,7 @@ hr {
           font-size: 15px; } }
     .tile.tile-super .tile-inner {
 
-      background: #f0f url('http://d1e3ezyatlol8u.cloudfront.net/img/114/doge-derp-114.gif');
+      background: url('/img/gems64/12.png');
       background-size: cover;    
       font-size: 30px; }
       @media screen and (max-width: 480px) {
