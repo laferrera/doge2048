@@ -1,7 +1,7 @@
 # Doge2048
-Just a couple of minor tweakts to Gabriele Cirulli's code base [here](https://github.com/gabrielecirulli/2048)
+Just a couple of minor tweaks to Gabriele Cirulli's code base [here](https://github.com/gabrielecirulli/2048)
 
-Made just for fun. [Play it here!](http://doge2048.com)
+Made just for fun. [Go Play it here!](http://doge2048.com)
 
 
 ## License
